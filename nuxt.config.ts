@@ -9,7 +9,13 @@ export default defineNuxtConfig({
 	},
 
 	plugins: [{ src: "./plugins/buffer.client.ts", ssr: false }],
-
+	app: {
+		head: {
+			htmlAttrs: {
+				class: ["dark"],
+			},
+		},
+	},
 	vite: {
 		plugins: [nodePolyfills()],
 	},
